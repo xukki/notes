@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>HI {{user}}</h1>
+<form action="/notes" method="post">
+<button type="submit">Go to notes</button>
+</form>
+
+<form action="/login" method="post">
+    <input type="hidden" value="logout" name = "logout">
+    <button type="submit">Logout</button>
+</form>
+{%endblock%}

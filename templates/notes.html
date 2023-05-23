@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+    <h1 style="text-align: center;">{{user}}'s Notes</h1>
+        <form>
+        <input id="nameOfNote" type="text" placeholder="Name">
+        <input id = "content" type="text" placeholder="Content">
+        <button onclick="newNote()" type="button">Create new note</button>
+        </form>
+    <script>
+        
+        function newNote(){
+           var title = document.createElement("h1"); 
+           title.innerText = document.getElementById("nameOfNote").value;
+           document.body.appendChild(title);
+           var content = document.createElement("p");
+           content.innerText = document.getElementById("content").value;
+           document.body.appendChild(content);
+        }
+    </script>
+{% endblock %}
